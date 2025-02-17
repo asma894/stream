@@ -6,8 +6,8 @@ import type React from "react" // Import React
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Medical Frequency",
-  description: "The ultimate platform for healthcare professionals and medical enthusiasts.",
+  title: "Fréquence Médicale",
+  description: "La plateforme ultime pour les professionnels de santé et les passionnés de médecine.",
 }
 
 export default function RootLayout({
@@ -16,9 +16,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <body className={inter.className}>{children}</body>
     </html>
   )
 }
-

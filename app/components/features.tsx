@@ -6,18 +6,18 @@ import { Video, BookOpen, Users } from "lucide-react"
 const features = [
   {
     icon: Video,
-    title: "Live Streaming",
-    description: "Join live sessions with top medical professionals and experts.",
+    title: "Streaming en direct",
+    description: "Participez à des sessions en direct avec les meilleurs professionnels et experts médicaux.",
   },
   {
     icon: BookOpen,
-    title: "Exclusive Content",
-    description: "Access a library of premium medical videos and resources.",
+    title: "Contenu exclusif",
+    description: "Accédez à une bibliothèque de vidéos et ressources médicales premium.",
   },
   {
     icon: Users,
-    title: "Community",
-    description: "Connect with like-minded individuals and share insights.",
+    title: "Communauté",
+    description: "Connectez-vous avec des personnes partageant les mêmes idées et partagez vos connaissances.",
   },
 ]
 
@@ -31,7 +31,7 @@ export default function Features() {
           transition={{ duration: 0.8 }}
           className="text-3xl font-bold text-center mb-12"
         >
-          What We Offer
+          Ce que nous proposons
         </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
@@ -54,4 +54,3 @@ export default function Features() {
     </section>
   )
 }
-

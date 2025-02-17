@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
@@ -15,6 +12,7 @@ model User {
   email     String     @unique @db.VarChar(255)
   username  String     @unique @db.VarChar(255)
   password  String     @db.VarChar(255)
+  userType  UserType   @default(USER)
   likes     Like[]
   favorites Favorite[]
   comments  Comment[]
@@ -22,6 +20,11 @@ model User {
   updatedAt DateTime   @updatedAt
 
   @@index([email])
+}
+
+enum UserType {
+  USER
+  ADMIN
 }
 
 model Video {

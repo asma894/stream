@@ -8,7 +8,8 @@ export default function SharedFooter() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">About Us</h3>
             <p className="text-sm text-gray-600">
-              Medical Frequency is the ultimate platform for healthcare professionals and medical enthusiasts.
+              Fréquence Médicale is the ultimate platform for healthcare professionals and medical enthusiasts.
+
             </p>
           </div>
           <div className="space-y-4">
@@ -55,10 +56,10 @@ export default function SharedFooter() {
           </div>
         </div>
         <div className="mt-12 pt-8 border-t text-center">
-          <p className="text-sm text-gray-600">© {new Date().getFullYear()} Medical Frequency. All rights reserved.</p>
+          <p className="text-sm text-gray-600">© {new Date().getFullYear()} Fréquence Médicale. All rights reserved.</p>
+
         </div>
       </div>
     </footer>
   )
 }
-

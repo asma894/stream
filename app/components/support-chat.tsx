@@ -6,21 +6,36 @@ import { Input } from "./ui/input"
 import { Button } from "./ui/button"
 import { Card } from "./ui/card"
 
+interface Message {
+  id: string
+  text: string
+  isUser: boolean
+}
+
 export default function SupportChat() {
   const [isOpen, setIsOpen] = useState(false)
-  const [messages, setMessages] = useState<{ text: string; isUser: boolean }[]>([])
+  const [messages, setMessages] = useState<Message[]>([])
   const [inputMessage, setInputMessage] = useState("")
 
   const sendMessage = () => {
     if (inputMessage.trim()) {
-      setMessages([...messages, { text: inputMessage, isUser: true }])
+      const newMessage: Message = {
+        id: Date.now().toString(),
+        text: inputMessage,
+        isUser: true,
+      }
+      setMessages([...messages, newMessage])
       setInputMessage("")
-      // Simulate a response from support
+
+      // Simulate sending the message to the admin interface
+      // In a real application, you would use a WebSocket or API call here
       setTimeout(() => {
-        setMessages((prev) => [
-          ...prev,
-          { text: "Thank you for your message. Our support team will get back to you soon.", isUser: false },
-        ])
+        const adminResponse: Message = {
+          id: (Date.now() + 1).toString(),
+          text: "Thank you for your message. Our support team will get back to you soon.",
+          isUser: false,
+        }
+        setMessages((prev) => [...prev, adminResponse])
       }, 1000)
     }
   }
@@ -41,10 +56,12 @@ export default function SupportChat() {
             </Button>
           </div>
           <div className="flex-grow overflow-auto p-4 space-y-4">
-            {messages.map((message, index) => (
-              <div key={index} className={`flex ${message.isUser ? "justify-end" : "justify-start"}`}>
+            {messages.map((message) => (
+              <div key={message.id} className={`flex ${message.isUser ? "justify-end" : "justify-start"}`}>
                 <div
-                  className={`max-w-[80%] p-2 rounded-lg ${message.isUser ? "bg-primary text-primary-foreground" : "bg-secondary"}`}
+                  className={`max-w-[80%] p-2 rounded-lg ${
+                    message.isUser ? "bg-primary text-primary-foreground" : "bg-secondary"
+                  }`}
                 >
                   {message.text}
                 </div>

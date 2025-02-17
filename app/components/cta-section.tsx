@@ -28,7 +28,8 @@ export default function CtaSection() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-muted-foreground mb-12">
-            Join Medical Frequency today and unlock a world of medical knowledge and networking.
+            Join Fréquence Médicale today and unlock a world of medical knowledge and networking.
+
           </p>
           <Button
             onClick={handleStreamRedirect}
@@ -43,4 +44,3 @@ export default function CtaSection() {
     </section>
   )
 }
-

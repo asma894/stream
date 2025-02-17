@@ -1,47 +1,56 @@
-import { PrismaClient } from '@prisma/client';
-import { NextResponse } from 'next/server';
-import bcrypt from 'bcrypt'; // Pour hasher les mots de passe
+import { PrismaClient } from "@prisma/client"
+import { NextResponse } from "next/server"
+import bcrypt from "bcrypt"
 
-const prisma = new PrismaClient();
+const prisma = new PrismaClient()
 
 export async function POST(request: Request) {
   try {
-    const body = await request.json();
+    const body = await request.json()
+    const { username, email, password } = body
 
-    // Vérification des champs obligatoires
-    if (!body || !body.username || !body.email || !body.password) {
-      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
+    // Validate input
+    if (!username || !email || !password) {
+      return NextResponse.json({ error: "Missing required fields" }, { status: 400 })
     }
 
-    const { username, email, password } = body;
-
-    // Vérifier si l'utilisateur existe déjà
-    const existingUser = await prisma.user.findUnique({
-      where: { email },
-    });
+    // Check if user already exists
+    const existingUser = await prisma.user.findFirst({
+      where: {
+        OR: [{ email }, { username }],
+      },
+    })
 
     if (existingUser) {
-      return NextResponse.json({ error: 'User already exists' }, { status: 400 });
+      return NextResponse.json({ error: "Email or username already exists" }, { status: 400 })
     }
 
-    // Hasher le mot de passe
-    const hashedPassword = await bcrypt.hash(password, 10);
+    // Hash password
+    const hashedPassword = await bcrypt.hash(password, 10)
 
-    // Créer un nouvel utilisateur
-    const newUser = await prisma.user.create({
+    // Create user
+    const user = await prisma.user.create({
       data: {
         username,
         email,
-        password: hashedPassword, // Stocker le mot de passe hashé
+        password: hashedPassword,
       },
-    });
+    })
 
-    // Ne renvoyer que les informations nécessaires (sans le mot de passe)
-    const { password: _, ...userWithoutPassword } = newUser;
+    // Remove password from response
+    const { password: _, ...userWithoutPassword } = user
 
-    return NextResponse.json(userWithoutPassword, { status: 201 });
+    return NextResponse.json(
+      {
+        user: userWithoutPassword,
+        message: "User created successfully",
+        userType: body.userType || "user", // Send userType in response
+      },
+      { status: 201 },
+    )
   } catch (error) {
-    console.error('Error during signup:', error);
-    return NextResponse.json({ error: 'Failed to create user' }, { status: 500 });
+    console.error("Error during signup:", error)
+    return NextResponse.json({ error: "Failed to create user" }, { status: 500 })
   }
 }
+

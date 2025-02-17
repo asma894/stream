@@ -53,8 +53,9 @@ export default function SharedNavbar() {
         <nav className="flex items-center justify-between h-20">
           <Link href="/" className="relative w-[180px] h-[48px]">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Capture%20d'%C3%A9cran%202025-01-31%20150048-cmY5y6nS6FD3FOtgGpUzaeKtlODqPE.png"
-              alt="Medical Frequency"
+              src="http://localhost/stream/fm.png"
+              alt="Fréquence Médicale"
+
               fill
               className="object-contain"
               priority
@@ -112,4 +113,3 @@ export default function SharedNavbar() {
     </header>
   )
 }
-

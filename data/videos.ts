@@ -2,9 +2,9 @@ export const videos = [
     {
       id: 1,
       title: "Understanding Heart Surgery: A Comprehensive Guide",
-      url: "https://www.youtube.com/watch?v=yE-7_VBvl0k",
+      url: "https://youtu.be/9DIK92KMAP8?si=BXwBRPOi9TE0GJub",
       thumbnail:
-        "https://sjc.microlink.io/wl6YddauB7S95PA7xDghNJBP4kJTRuTErmK-gomKVQl-7Nsbfp1i4IYdkimR5Ao8Ur9-CO-phjCZYyMZVB99uA.jpeg",
+        "http://localhost/stream/heart.png",
       duration: "45:20",
       views: "125K",
       date: "2024-02-10",
@@ -14,9 +14,9 @@ export const videos = [
     {
       id: 2,
       title: "Latest Advances in Neurology - 2024 Update",
-      url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      url: "https://youtu.be/A2IqgIzbcWQ?si=yQlh1VjYoUMKMQK2",
       thumbnail:
-        "https://sjc.microlink.io/wl6YddauB7S95PA7xDghNJBP4kJTRuTErmK-gomKVQl-7Nsbfp1i4IYdkimR5Ao8Ur9-CO-phjCZYyMZVB99uA.jpeg",
+        "http://localhost/stream/neu.png",
       duration: "32:15",
       views: "98K",
       date: "2024-02-08",
@@ -26,9 +26,9 @@ export const videos = [
     {
       id: 3,
       title: "Emergency Medicine: First Response Protocols",
-      url: "https://www.youtube.com/watch?v=M7lc1UVf-VE",
+      url: "https://youtu.be/Ovsw7tdneqE?si=cpwblblol52vKsek",
       thumbnail:
-        "https://sjc.microlink.io/wl6YddauB7S95PA7xDghNJBP4kJTRuTErmK-gomKVQl-7Nsbfp1i4IYdkimR5Ao8Ur9-CO-phjCZYyMZVB99uA.jpeg",
+        "http://localhost/stream/em.png",
       duration: "28:45",
       views: "156K",
       date: "2024-02-05",
@@ -38,9 +38,9 @@ export const videos = [
     {
       id: 4,
       title: "Pediatric Care: Best Practices and New Approaches",
-      url: "https://www.youtube.com/watch?v=1Q8fG0TtVAY",
+      url: "https://youtu.be/jVYQ3Y4MT6U?si=WNHFH8NAYB22uGp9",
       thumbnail:
-        "https://sjc.microlink.io/wl6YddauB7S95PA7xDghNJBP4kJTRuTErmK-gomKVQl-7Nsbfp1i4IYdkimR5Ao8Ur9-CO-phjCZYyMZVB99uA.jpeg",
+        "http://localhost/stream/ped.png",
       duration: "36:50",
       views: "89K",
       date: "2024-02-03",
@@ -50,9 +50,9 @@ export const videos = [
     {
       id: 5,
       title: "Innovations in Orthopedic Surgery",
-      url: "https://www.youtube.com/watch?v=9bZkp7q19f0",
+      url: "https://youtu.be/ZaJIQLZapYA?si=4OtW1ez0i0bTY1qX",
       thumbnail:
-        "https://sjc.microlink.io/wl6YddauB7S95PA7xDghNJBP4kJTRuTErmK-gomKVQl-7Nsbfp1i4IYdkimR5Ao8Ur9-CO-phjCZYyMZVB99uA.jpeg",
+        "http://localhost/stream/or.png",
       duration: "41:30",
       views: "112K",
       date: "2024-02-01",
@@ -62,9 +62,9 @@ export const videos = [
     {
       id: 6,
       title: "Mental Health in Modern Medicine",
-      url: "https://www.youtube.com/watch?v=XGK84Poeynk",
+      url: "https://youtu.be/lljTljj62vc?si=suJCp25AhmrUzs4x",
       thumbnail:
-        "https://sjc.microlink.io/wl6YddauB7S95PA7xDghNJBP4kJTRuTErmK-gomKVQl-7Nsbfp1i4IYdkimR5Ao8Ur9-CO-phjCZYyMZVB99uA.jpeg",
+        "http://localhost/stream/men.png",
       duration: "39:15",
       views: "143K",
       date: "2024-01-30",
@@ -74,9 +74,9 @@ export const videos = [
     {
       id: 7,
       title: "Dermatology Updates: Skin Cancer Prevention",
-      url: "https://www.youtube.com/watch?v=JGwWNGJdvx8",
+      url: "https://youtu.be/QlIeNxyQkfs?si=niP44ykbBIqosb-1",
       thumbnail:
-        "https://sjc.microlink.io/wl6YddauB7S95PA7xDghNJBP4kJTRuTErmK-gomKVQl-7Nsbfp1i4IYdkimR5Ao8Ur9-CO-phjCZYyMZVB99uA.jpeg",
+        "http://localhost/stream/can.png",
       duration: "33:20",
       views: "76K",
       date: "2024-01-28",
@@ -86,9 +86,9 @@ export const videos = [
     {
       id: 8,
       title: "Advanced Cardiology Techniques",
-      url: "https://www.youtube.com/watch?v=kJQP7kiw5Fk",
+      url: "https://youtu.be/5lH1Eu5K61M?si=9MsU26CSIQ7fboVU",
       thumbnail:
-        "https://sjc.microlink.io/wl6YddauB7S95PA7xDghNJBP4kJTRuTErmK-gomKVQl-7Nsbfp1i4IYdkimR5Ao8Ur9-CO-phjCZYyMZVB99uA.jpeg",
+        "http://localhost/stream/1.png",
       duration: "47:10",
       views: "167K",
       date: "2024-01-25",

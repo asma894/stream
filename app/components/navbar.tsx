@@ -28,8 +28,9 @@ export default function Navbar() {
         <nav className="flex items-center justify-between h-20">
           <Link href="/" className="relative w-[180px] h-[48px]">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Capture%20d'%C3%A9cran%202025-01-31%20150048-cmY5y6nS6FD3FOtgGpUzaeKtlODqPE.png"
-              alt="Medical Frequency"
+              src="http://localhost/stream/fm.png"
+              alt="Fréquence Médicale"
+
               fill
               className="object-contain"
               priority
@@ -38,20 +39,25 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center space-x-8">
             <Link href="/" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors">
-              Home
+              Accueil
+
             </Link>
             <Link href="/about" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors">
-              About
+              À propos
+
             </Link>
             <Link href="/services" className="text-sm font-medium text-gray-700 hover:text-primary transition-colors">
               Services
+
             </Link>
             <div className="flex items-center space-x-4">
               <Button variant="ghost" asChild>
-                <Link href="/login">Login</Link>
+                <Link href="/login">Connexion</Link>
+
               </Button>
               <Button asChild>
-                <Link href="/signup">Sign Up</Link>
+                <Link href="/signup">S'inscrire</Link>
+
               </Button>
             </div>
           </div>
@@ -60,4 +66,3 @@ export default function Navbar() {
     </header>
   )
 }
-
